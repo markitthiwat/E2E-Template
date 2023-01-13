@@ -1,0 +1,38 @@
+{
+  "name": "e2e-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build/ && npx babel src -d ./build/ --source-maps inline --verbose",
+    "test": "mocha src/tests/index.js --require @babel/register --require source-map-support/register --timeout 100000",
+    "test-exit-on-error": "mocha src/tests/index.js --require @babel/register --require source-map-support/register --bail --timeout 600000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.10.4",
+    "bs58": "^4.0.1",
+    "dayjs": "^1.10.7",
+    "express": "^4.17.1",
+    "form-data": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^2.6.1",
+    "node-forge": "^0.10.0",
+    "source-map-support": "^0.5.19",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "mocha": "^8.4.0"
+  }
+}

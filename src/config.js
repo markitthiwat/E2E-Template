@@ -1,0 +1,1 @@
+export const MAIN_SERVER_HOST = process.env.SERVER_HOST || 'https://picsum.photos/';
